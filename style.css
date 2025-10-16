@@ -1,0 +1,114 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Floating card */
+.floating-box {
+  background: #121212;
+  border: 1px solid #2c2c2c;
+  border-radius: 20px;
+  margin-top: 10%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: floatIn 0.8s ease-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #9f9f9f;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px ;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: #444;
+}
+
+.btn.secondary:hover {
+  background-color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .floating-box {
+    padding: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
